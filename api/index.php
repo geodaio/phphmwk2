@@ -1,3 +1,3 @@
 <?php
-echo readfile("phphmwk2/api/assignment.html");
+  include("phphmwk2/api/assignment.html");
 ?>
