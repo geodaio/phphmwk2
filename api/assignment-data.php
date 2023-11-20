@@ -23,7 +23,7 @@ if ($SERVER["REQUEST-METHOD"] == "GET") {
             // Set returnedFruit equal to itself plus $fruit
             // Make sure to surround the fruit variable in li tags
             // You can add something to itself using ".=" when you assign it
-            $returnedFruit ".="."<li>".$fruit."</li>";
+            $returnedFruit.="<li>".$fruit."</li>";
 
         } 
         
