@@ -76,7 +76,7 @@
                             // Inside of the if statement, you'll output this.responseText to the div tag with an id of fruitOutput 
                             
                             myRequest.onreadystatechange = function() {
-                              if (this.readtState == 4 && this.status == 200){
+                              if (this.readyState == 4 && this.status == 200){
                                 document.getElementById("fruitOutput").innerHTML = this.responseText;
                               }
                             }
