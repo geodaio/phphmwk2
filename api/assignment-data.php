@@ -6,7 +6,7 @@ $fruitsArray = array("Acerola", "Apple", "Apricot", "Avocado", "Banana", "Blackb
 // Create a variable called returnedFruit and assign an empty string to it
 $returnedFruit = "";
 // Check if our server used GET for the request method
-if ($SERVER["REQUEST-METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     
     // Create a variable called submittedFruit and set it to our fruitInput data from $_GET
     $submittedFruit = $_GET["fruitInput"];
@@ -19,12 +19,10 @@ if ($SERVER["REQUEST-METHOD"] == "GET") {
         // The second argument should be our submitted fruit ($submittedFruit)
         // The result of the stripos function must be equal to 0 (=== 0)
         if (stripos($fruit, $submittedFruit) === 0) {
-            
             // Set returnedFruit equal to itself plus $fruit
             // Make sure to surround the fruit variable in li tags
             // You can add something to itself using ".=" when you assign it
             $returnedFruit.="<li>".$fruit."</li>";
-
         } 
         
     }
@@ -32,10 +30,10 @@ if ($SERVER["REQUEST-METHOD"] == "GET") {
 }
 
 // Check if our returnedFruit variable is not equal to an empty string
-if (empty($returnedFruit)) {
+if (empty($returnedFruit) == false) {
     
     // Echo the returnedFruit variable
-    echo returnedFruit;
+    echo $returnedFruit;
     
 } else {
 
