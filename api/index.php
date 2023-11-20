@@ -34,11 +34,11 @@
     
         </style>
     </head>
+        
     
     <body>
         <h1>AJAX &amp; PHP Exercise</h1>
-        <div class="container">
-    
+        <div class="container"> 
             <p>Your task is to use AJAX to pull data from a PHP page and display it on this page. The page with the data you want is "assignment-data.php" and it contains an array with numerous fruits. You'll add HTML/JS to this page and PHP code to the other page to complete this assignment. </p>
             
             <h3>Fruit Autofiller</h3>
@@ -51,54 +51,53 @@
                 Please enter a fruit.
                 
                 <script>
-                
-                // Fill the parenthesis for the getElementById function. It should match the id of your input
-                document.getElementById("fruitInput").onkeyup = function() {
                     
-                    // Create a variable called fruit and store the value of our input in it (this.value)
-                    var fruit = this.value;
-    
-                    // Fill the parenthesis - Check to see if our fruit variabl is equal to empty strings
-                    if (fruit == "") {
-                        document.getElementById("fruitOutput").innerHTML = <p>Please enter a fruit.</p>;
-                        // Output "<p>Please enter a fruit.</p>" to the div tag with an id of fruitOutput
+                    // Fill the parenthesis for the getElementById function. It should match the id of your input
+                    document.getElementById("fruitInput").onkeyup = function() {
                         
-                        
-                    } else {
-                        
-                        // Create a variable called myRequest and store a new XMLHttpRequest in it
-                        var myRequest = new XMLHttpRequest();
-                      
-    
-                        // Create a function for when the ready state changes for your myRequest
-                        // Inside of that function will be an if statement to check the readyState (4) and status (200) of our request
-                        // You can refer to our request with "this" 
-                        // Inside of the if statement, you'll output this.responseText to the div tag with an id of fruitOutput 
-                        
-                        myRequest.onreadystatechange = function() {
-                          if (this.readtState == 4 && this.status == 200){
-                            document.getElementById("fruitOutput").innerHTML = this.responseText;
-                          }
+                        // Create a variable called fruit and store the value of our input in it (this.value)
+                        var fruit = this.value;
+        
+                        // Fill the parenthesis - Check to see if our fruit variabl is equal to empty strings
+                        if (fruit == "") {
+                            document.getElementById("fruitOutput").innerHTML = <p>Please enter a fruit.</p>;
+                            // Output "<p>Please enter a fruit.</p>" to the div tag with an id of fruitOutput
+                            
+                            
+                        } else {
+                            
+                            // Create a variable called myRequest and store a new XMLHttpRequest in it
+                            var myRequest = new XMLHttpRequest();
+                          
+        
+                            // Create a function for when the ready state changes for your myRequest
+                            // Inside of that function will be an if statement to check the readyState (4) and status (200) of our request
+                            // You can refer to our request with "this" 
+                            // Inside of the if statement, you'll output this.responseText to the div tag with an id of fruitOutput 
+                            
+                            myRequest.onreadystatechange = function() {
+                              if (this.readtState == 4 && this.status == 200){
+                                document.getElementById("fruitOutput").innerHTML = this.responseText;
+                              }
+                            }
+        
+        
+                            // Use the .open() method on the myRequest variable. It should use three arguments
+                            // "GET" should be the first argument
+                            // assignment-data.php?fruitInput=" concatenated with the fruit variable should be the 2nd argument
+                            // true should be the third argument-
+                            
+                            myRequest.open("GET", "assignment-data.php?fruitInput=".fruit, "true");
+        
+                            // Use the .send() method on myRequest
+                            myRequest.send();
                         }
-    
-    
-                        // Use the .open() method on the myRequest variable. It should use three arguments
-                        // "GET" should be the first argument
-                        // assignment-data.php?fruitInput=" concatenated with the fruit variable should be the 2nd argument
-                        // true should be the third argument-
-                        
-                        myRequest.open("GET", "assignment-data.php?fruitInput=".fruit, "true");
-    
-                        // Use the .send() method on myRequest
-                        myRequest.send();
+        
                     }
-    
-                }
-    
-               </script>
+        
+                   </script>
               </p>
             </div>
-            
         </div>
     </body>
 </html>
