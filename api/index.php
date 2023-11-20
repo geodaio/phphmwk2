@@ -1,3 +1,3 @@
 <?php
-echo readfile("/api/assignment.html");
+echo readfile("phphmwk2/api/assignment.html");
 ?>
