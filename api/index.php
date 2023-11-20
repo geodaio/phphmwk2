@@ -54,10 +54,10 @@
                     
                     // Fill the parenthesis for the getElementById function. It should match the id of your input
                     document.getElementById("fruitInput").onkeyup = function() {
-                        
+                        console.log("test");
                         // Create a variable called fruit and store the value of our input in it (this.value)
                         var fruit = this.value;
-        
+                        console.log("fruit");
                         // Fill the parenthesis - Check to see if our fruit variabl is equal to empty strings
                         if (fruit == "") {
                             document.getElementById("fruitOutput").innerHTML = <p>Please enter a fruit.</p>;
