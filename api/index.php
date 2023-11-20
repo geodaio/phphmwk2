@@ -60,7 +60,7 @@
                         console.log("fruit");
                         // Fill the parenthesis - Check to see if our fruit variabl is equal to empty strings
                         if (fruit == "") {
-                            document.getElementById("fruitOutput").innerHTML = <p>Please enter a fruit.</p>;
+                            document.getElementById("fruitOutput").innerHTML = "<p>Please enter a fruit.</p>";
                             // Output "<p>Please enter a fruit.</p>" to the div tag with an id of fruitOutput
                             
                             
