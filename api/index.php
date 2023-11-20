@@ -1,3 +1,3 @@
 <?php
-echo readfile(assignment.html);
+echo readfile("assignment.html");
 ?>
