@@ -87,7 +87,7 @@
                             // assignment-data.php?fruitInput=" concatenated with the fruit variable should be the 2nd argument
                             // true should be the third argument-
                             
-                            myRequest.open("GET", "assignment-data.php?fruitInput=".fruit, "true");
+                            myRequest.open("GET", "/api/assignment-data.php?fruitInput=".fruit, "true");
         
                             // Use the .send() method on myRequest
                             myRequest.send();
