@@ -5,7 +5,7 @@
     }
   },
   "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" }
-    { "src": "/api/assignment-data-php",  "dest": "/api/assignment-data.php" }
+    { "src": "/api/index.php",  "dest": "/api/index.php" }
+    { "src": "/api/assignment-data.php",  "dest": "/api/assignment-data.php" }
   ]
 }
