@@ -4,8 +4,8 @@
       "runtime": "vercel-php@0.6.0"
     }
   },
-  "rewrites": [
-    { "source": "https://phphmwk2.vercel.app/assignment-data.php(.*)", "destination": "/api/assignment-data.php" },
-    { "source": "https://phphmwk2.vercel.app/api/index.php", "destination": "/api/index.php" }
+  "routes": [
+    { "src": "https://phphmwk2.vercel.app/assignment-data.php(.*)", "dest": "/api/assignment-data.php" },
+    { "src": "https://phphmwk2.vercel.app/api/index.php", "dest": "/api/index.php" }
   ]
 }
