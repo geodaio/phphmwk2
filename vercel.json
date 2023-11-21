@@ -9,5 +9,3 @@
     { "source": "https://phphmwk2.vercel.app/api/index.php", "destination": "/api/index.php" }
   ]
 }
-
-
