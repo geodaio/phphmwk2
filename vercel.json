@@ -6,6 +6,6 @@
   },
   "routes": [
     { "src": "https://phphmwk2.vercel.app/assignment-data.php(.*)", "dest": "/api/assignment-data.php" },
-    { "src": "https://phphmwk2.vercel.app/api/index.php", "dest": "/api/index.php" }
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
