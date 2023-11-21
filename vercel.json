@@ -4,4 +4,9 @@
       "runtime": "vercel-php@0.6.0"
     }
   }
+  "rewrites": [
+    { "source": "https://phphmwk2.vercel.app/assignment-data.php(.*)", "destination": "/api/assignment-data.php" },
+    { "source": "https://phphmwk2.vercel.app/api/index.php", "destination": "/api/index.php" }
+  ]
 }
+
